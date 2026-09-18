@@ -14,10 +14,22 @@ A project-level implementation of the assignment **Building a Smart Reading & Wr
 
 ## Run locally
 ### Backend
-```bash
-pip install -r requirements.txt
+**Option A (Fastest via helper script):**
+```cmd
+.\run_backend.bat
+```
+
+**Option B (Manual via virtual environment):**
+```powershell
+# Activate .venv (PowerShell)
+.\.venv\Scripts\Activate.ps1
 uvicorn backend:app --reload --port 8000
 ```
+*Or directly without activating:*
+```powershell
+.\.venv\Scripts\python.exe -m uvicorn backend:app --reload --port 8000
+```
+
 The spaCy model is installed by the requirements URL.
 
 ### Frontend
